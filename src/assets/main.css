@@ -42,3 +42,13 @@
 body {
   background-color: rgb(var(--brand-neutral-800));
 }
+
+.brand-gradient {
+  background: linear-gradient(25deg, rgb(168, 41, 199) 0%, rgb(255, 143, 63) 100%);
+}
+
+.text-brand-gradient {
+  background: linear-gradient(45deg, rgb(168, 41, 199) 20%, rgb(255, 143, 63) 40%);
+  color: transparent;
+  background-clip: text;
+}
