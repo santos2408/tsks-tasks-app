@@ -4,6 +4,13 @@ import defaultTheme from "tailwindcss/defaultTheme";
 export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts}"],
   theme: {
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1142px",
+    },
+
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
