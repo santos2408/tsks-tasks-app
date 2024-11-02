@@ -10,6 +10,9 @@ export default {
       },
 
       colors: {
+        "brand-white": "rgb(var(--brand-white))",
+        "brand-black": "rgb(var(--brand-black))",
+
         "brand-primary": {
           50: "rgb(var(--brand-primary-50))",
           100: "rgb(var(--brand-primary-100))",
