@@ -1,3 +1,7 @@
 {
-  "*.{html,js,ts,vue}": ["npx eslint src/** --fix", "npx prettier --write src/"]
+  "*.{html,js,ts,vue}": [
+    "npx eslint src/** --fix",
+    "npx prettier --write src/",
+    "npm run test:staged"
+  ]
 }
