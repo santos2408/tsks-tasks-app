@@ -1,5 +1,11 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import { Menu } from "lucide-vue-next";
+
 import LogoComponent from "@/components/LogoComponent/LogoComponent.vue";
+import MenuMobile from "../MenuMobile/MenuMobile.vue";
+
+const isVisible = ref(false);
 </script>
 
 <template>
@@ -11,21 +17,14 @@ import LogoComponent from "@/components/LogoComponent/LogoComponent.vue";
         </RouterLink>
       </div>
 
-      <div class="flex items-center gap-6">
-        <button
-          type="button"
-          class="text-brand-neutral-100 transition hover:text-brand-neutral-50"
-        >
-          Log in
-        </button>
+      <button type="button" @click="() => (isVisible = !isVisible)">
+        <Menu :size="32" class="text-brand-neutral-50" />
+      </button>
 
-        <button
-          type="button"
-          class="rounded-xl border-2 border-brand-neutral-400 px-8 py-3 text-brand-neutral-100 transition hover:text-brand-neutral-50"
-        >
-          Sign up
-        </button>
-      </div>
+      <MenuMobile
+        :visible="isVisible"
+        @close-menu-mobile="(payload: boolean) => (isVisible = payload)"
+      />
     </nav>
   </header>
 </template>
